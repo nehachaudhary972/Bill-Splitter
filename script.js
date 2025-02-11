@@ -44,31 +44,17 @@ function UpdateTipAmount(selectedTip = null) {
   eachPersonBillDisplay.innerText = `Each Person: ₹ ${eachPersonBill.toFixed(
     2
   )}`;
-  resetButton.addEventListener("click", function () {
-    // Reset input fields
-    Amount.value = "";
-    customtip.value = "";
-    numOfpeople.value = "";
-
-    // Reset displayed values
-    tipAmountDisplay.innerText = "Tip Amount: ₹ 0.00";
-    totalBillDisplay.innerText = "Total Bill: ₹ 0.00";
-    eachPersonBillDisplay.innerText = "Each Person: ₹ 0.00";
-  });
 }
 
-// Event listeners for custom tip and number of people input
 customtip.addEventListener("input", () => UpdateTipAmount());
 numOfpeople.addEventListener("input", () => UpdateTipAmount());
 Amount.addEventListener("input", () => UpdateTipAmount());
 
 resetButton.addEventListener("click", function () {
-  // Reset input fields
   Amount.value = "";
   customtip.value = "";
   numOfpeople.value = "";
 
-  // Reset displayed values
   tipAmountDisplay.innerText = "Tip Amount: ₹ 0.00";
   totalBillDisplay.innerText = "Total Bill: ₹ 0.00";
   eachPersonBillDisplay.innerText = "Each Person: ₹ 0.00";
