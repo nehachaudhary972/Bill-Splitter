@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .main-section {
   margin-top: 40px;
   height: 80vh;
@@ -25,8 +26,8 @@ body {
   font-size: 1.5rem;
   width: 250px;
 }
-h3 {
-  margin-left: 30px;
+h2 {
+  margin-left: 40px;
 }
 
 .card1 {
@@ -80,4 +81,15 @@ h3 {
 .second-section p {
   height: 30px;
   font-size: 1.5rem;
+}
+.reset {
+  background-color: #bd4b6b;
+  color: #ffedfa;
+  height: 40px;
+  width: 60px;
+  border: none;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: #e195ab;
 }

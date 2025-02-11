@@ -6,7 +6,7 @@ for (let i = 0; i < values.length; i++) {
   card.innerText = values[i];
   card.classList.add("card1");
   card.addEventListener("click", function () {
-    UpdateTipAmount(parseFloat(values[i])); // Convert "10%" to 10
+    UpdateTipAmount(parseFloat(values[i]));
   });
   container.appendChild(card);
 }
@@ -17,6 +17,7 @@ const numOfpeople = document.querySelector(".numOfpeople");
 const tipAmountDisplay = document.getElementById("Tip");
 const totalBillDisplay = document.getElementById("total");
 const eachPersonBillDisplay = document.getElementById("each-person");
+const resetButton = document.querySelector(".reset");
 
 function Totalbill(OrderdAmount, TipPercentage) {
   return OrderdAmount + (OrderdAmount * TipPercentage) / 100;
@@ -35,7 +36,7 @@ function UpdateTipAmount(selectedTip = null) {
   }
 
   let tipAmount = (billAmount * tipPercentage) / 100;
-  let totalBill = Totalbill(Amount, tipPercentage);
+  let totalBill = Totalbill(billAmount, tipPercentage);
   let eachPersonBill = totalBill / numPeople;
 
   tipAmountDisplay.innerText = `Tip Amount: ₹ ${tipAmount.toFixed(2)}`;
@@ -43,9 +44,32 @@ function UpdateTipAmount(selectedTip = null) {
   eachPersonBillDisplay.innerText = `Each Person: ₹ ${eachPersonBill.toFixed(
     2
   )}`;
+  resetButton.addEventListener("click", function () {
+    // Reset input fields
+    Amount.value = "";
+    customtip.value = "";
+    numOfpeople.value = "";
+
+    // Reset displayed values
+    tipAmountDisplay.innerText = "Tip Amount: ₹ 0.00";
+    totalBillDisplay.innerText = "Total Bill: ₹ 0.00";
+    eachPersonBillDisplay.innerText = "Each Person: ₹ 0.00";
+  });
 }
 
 // Event listeners for custom tip and number of people input
 customtip.addEventListener("input", () => UpdateTipAmount());
 numOfpeople.addEventListener("input", () => UpdateTipAmount());
 Amount.addEventListener("input", () => UpdateTipAmount());
+
+resetButton.addEventListener("click", function () {
+  // Reset input fields
+  Amount.value = "";
+  customtip.value = "";
+  numOfpeople.value = "";
+
+  // Reset displayed values
+  tipAmountDisplay.innerText = "Tip Amount: ₹ 0.00";
+  totalBillDisplay.innerText = "Total Bill: ₹ 0.00";
+  eachPersonBillDisplay.innerText = "Each Person: ₹ 0.00";
+});
