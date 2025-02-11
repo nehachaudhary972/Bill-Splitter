@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill-Splitter</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="outer-div">
+        <div class="calculation">
+          <h1>Bill</h1>
+
+          <input
+            class="amount"
+            type="text"
+            onfocus="if(!this.value.includes('₹')) this.value='₹ ' + this.value"
+            onblur="if(this.value==='₹ ') this.value=''"
+            placeholder="₹ 0"
+          />
+        </div>
+        <h3>select Tip</h3>
+        <div id="container"></div>
+        <input
+          class="customTip"
+          type="text"
+          placeholder="Custom Tip in Percentage"
+        /><br />
+        <input
+          class="numOfpeople"
+          type="text"
+          placeholder="Enter the number of people"
+        />
+      </div>
+      <section class="second-section">
+        <div class="second-outer">
+          <p id="Tip">Tip Amount</p>
+          <p id="total">Total</p>
+          <p id="each-person">Each Person Bill</p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

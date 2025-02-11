@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-section {
+  margin-top: 40px;
+  height: 80vh;
+  width: 180vh;
+  background-color: #ffedfa;
+  color: #e195ab;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 5px solid #de3163;
+  border-radius: 10px;
+}
+.calculation {
+  margin-left: 40px;
+}
+.amount {
+  color: #de3163;
+  font-size: 1.5rem;
+  width: 250px;
+}
+h3 {
+  margin-left: 30px;
+}
+
+.card1 {
+  width: 60px;
+  height: 30px;
+  background-color: #e195ab;
+  color: #de3163;
+  margin: 10px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.card1:hover {
+  background-color: #de3163;
+  color: #ffedfa;
+  cursor: pointer;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 300px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.customTip,
+.numOfpeople {
+  margin-left: 30px;
+  height: 30px;
+  width: 250px;
+  margin-top: 40px;
+  color: #de3163;
+  font-size: 16px;
+}
+.second-section {
+  margin-top: 10px;
+  height: 70vh;
+  width: 80vh;
+  background-color: #962645;
+  margin-left: 60px;
+  box-sizing: border-box;
+  color: #ffedfa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section p {
+  height: 30px;
+  font-size: 1.5rem;
+}
